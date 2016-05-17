@@ -6,10 +6,10 @@ package com.hao.basic.model;
  *
  */
 public class SystemContext {
-	private static ThreadLocal<Integer> pageSize;
-	private static ThreadLocal<Integer> pageOffset;
-	private static ThreadLocal<String> sort;
-	private static ThreadLocal<String> order;
+	private static ThreadLocal<Integer> pageSize = new ThreadLocal<Integer>();
+	private static ThreadLocal<Integer> pageOffset = new ThreadLocal<Integer>();
+	private static ThreadLocal<String> sort = new ThreadLocal<String>();
+	private static ThreadLocal<String> order = new ThreadLocal<String>();
 	
 	public static Integer getPageSize() {
 		return pageSize.get();
